@@ -47,11 +47,13 @@ function App() {
 
   return (
     <>
+    {/*Parent Div*/}
       <div
-        className="flex flex-row lg:flex-col h-screen w-screen  bg-cover bg-center relative  "
+        className="flex flex-col h-dvh bg-cover bg-center relative lg:flex-row  "
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       >
-        <div className=" bg-black-100 text-white flex items-center justify-start h-screen lg:w-2/3 ">
+        {/*Div 1*/}
+        <div className="flex flex-row bg-black-500 text-white  items-center justify-start h-screen lg:w-2/3 ">
           <div className="mx-4">
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               NASA's Europa Clipper
@@ -85,8 +87,8 @@ function App() {
         </div>
 
         {/* Image Thumbnails with Circular Progress */}
-        <div className="lg:absolute bottom-0 right-0 mx-4 my-4">
-          <div className="flex flex-row space-x-3 ">
+        
+          <div className="flex flex-row space-x-3 lg:absolute bottom-0 right-0 mx-4 my-4">
             {images.map((src, index) => (
               <div key={index} className="relative inline-block h-12 w-12">
                 <img
@@ -152,7 +154,7 @@ function App() {
             </button>
           </div>
         </div>
-      </div>
+      
     </>
   );
 }
